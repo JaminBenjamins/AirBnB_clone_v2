@@ -13,7 +13,7 @@ def do_pack():
     """Archive static files"""
     if not os.path.isdir("versions"):
         os.mkdir("versions")
-    cur_time = datetime.now()
+    cur_time = datetime.utcnow()
     output = "versions/web_static_{}{}{}{}()().tgz".format(
             cur_time.year,
             cur_time.month,
