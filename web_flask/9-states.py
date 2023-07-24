@@ -2,7 +2,7 @@
 """Starts a web flask application
     Application listens on 0.0.0.0:5000
     Routes:
-        HTML page with given state 
+        HTML page with given state
         and cities ordered by name
 """
 from models import storage
@@ -23,7 +23,7 @@ def states():
 def states_id():
     """Display info about state id if it exists"""
     for state in storage.all("State").values():
-        if state.id == id
+        if state.id == id:
             return render_template("9-states.html", state=state)
     return render_template("9-states.html")
 
